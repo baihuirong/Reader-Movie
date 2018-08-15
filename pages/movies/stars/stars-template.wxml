@@ -1,0 +1,15 @@
+<template name="starsTemplate">
+  <view class="stars-container">
+    <view class="stars">
+    <block wx:for="{{stars}}" wx:for-item="i">
+    <!-- [1,1,1,2,0]用2来代替半星 -->
+      <image wx:if="{{i}}" src="/images/icon/star.png"></image>
+      <image wx:else src="/images/icon/none-star.png"></image> 
+      <!-- <image wx:if="{{i==1}}"></image>
+      <image wx:elif="{{i==2}}"></image>
+      <image wx:else></image> -->
+    </block>
+    </view>
+    <text class="star-score">{{average}}</text>
+  </view>
+</template>
